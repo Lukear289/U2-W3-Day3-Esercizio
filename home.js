@@ -13,7 +13,8 @@ const libreria = function () {
       }
     }
   });
-}.then((books) => {
+  .then((books) => {
+  const rowContainer = document.getElementsByClassName('row')[0];
   const bookList = document.getElementById('listaLibri');
 
   books.forEach((book) => {
@@ -32,4 +33,7 @@ const libreria = function () {
 
     bookList.appendChild(card);
   });
+});
+.catch((err) => {
+  console.log("ERRORE!", err);
 });
