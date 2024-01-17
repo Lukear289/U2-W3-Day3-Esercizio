@@ -1,7 +1,7 @@
 const libreria = function () {
   fetch('https://striveschool-api.herokuapp.com/books')
   .then((response) => {
-    console.log('response', response);
+    console.log('response', response)
     if (response.ok) {
       return response.json();
     } else {
@@ -13,7 +13,7 @@ const libreria = function () {
         throw new Error('Errore generico');
       }
     }
-  });
+  })
   .then((books) => {
   const rowContainer = document.getElementsByClassName('row')[0];
   const bookList = document.getElementById('listaLibri');
@@ -33,8 +33,8 @@ const libreria = function () {
       `;
 
     bookList.appendChild(card);
-  });
-});
+  })
+})
 .catch((err) => {
-  console.log("ERRORE!", err);
-});
+  console.log("ERRORE!", err)
+})
