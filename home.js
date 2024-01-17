@@ -13,7 +13,7 @@ const libreria = function () {
       }
     }
   });
-.then((books) => {
+}.then((books) => {
   const bookList = document.getElementById('listaLibri');
 
   books.forEach((book) => {
